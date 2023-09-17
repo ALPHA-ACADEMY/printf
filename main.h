@@ -18,6 +18,6 @@ int pf_String(va_list strings);
 int pf_Character(va_list characters);
 int pf_Percentage(void);
 int _printf(const char *format, ...);
-int pf_Decimal(va_list args);
+int pf_Int_Dec(va_list args);
 
 #endif

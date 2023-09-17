@@ -13,7 +13,8 @@ int _printf(const char * const format, ...)
 		{"%s", pf_String},
 		{"%c", pf_Character},
 		{"%%", pf_Percentage},
-		{"%d", pf_Decimal}
+		{"%d", pf_Int_Dec},
+		{"%i", pf_Int_Dec}
 	};
 
 	va_list args;
@@ -27,7 +28,7 @@ int _printf(const char * const format, ...)
 	{
 		int found_match = 0;
 
-		for (j = 0; j < 4; j++)
+		for (j = 0; j < 5; j++)
 		{
 			if(m[j].id[0] == format[i] && m[j].id[1] == format[i + 1])
 			{
