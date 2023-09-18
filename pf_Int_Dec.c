@@ -17,11 +17,11 @@ int pf_Int_Dec(va_list args)
 
 	if (last < 0)
 	{
-		_putchar('-')
+		_putchar('-');
 		num = -num;
 		n = -n;
 		last = -last;
-		i++
+		i++;
 	}
 	if (num > 0)
 	{
