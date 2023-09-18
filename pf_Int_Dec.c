@@ -9,38 +9,34 @@
 int pf_Int_Dec(va_list args)
 {
 	int n = va_arg(args, int);
-	int num, last = n % 10, digit, exp = 1;
-	int i = 1;
+	int num = n;
+	int i = 0;
+	int digit;
 
-	n = n / 10;
-	num = n;
-
-	if (last < 0)
+	if (n < 0)
 	{
 		_putchr('-');
 		num = -num;
-		n = -n;
-		last = -last;
 		i++;
 	}
-	if (num > 0)
+
+	int exp = 1;
+	while (num / 10 > 0)
 	{
-		while (num / 10 != 0)
-		{
-			exp *= 10;
-			num /= 10;
-		}
-		num = n;
-		while (exp > 0)
-		{
-			digit = num / exp;
-			_putchr(digit + '0');
-			num = num - (digit * exp);
-			exp = exp / 10;
-			i++;
-		}
+		exp *= 10;
+		num /= 10;
 	}
-	_putchr(last + '0');
+
+	num = n;
+	while (exp > 0)
+	{
+		digit = num / exp;
+		_putchr(digit + '0');
+		num -= digit * exp;
+		exp /= 10;
+		i++;
+	}
+	
 
 	return (i);
 }
