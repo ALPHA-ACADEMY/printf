@@ -17,7 +17,7 @@ int pf_Int_Dec(va_list args)
 
 	if (last < 0)
 	{
-		_putchar('-');
+		_putchr('-');
 		num = -num;
 		n = -n;
 		last = -last;
@@ -34,13 +34,13 @@ int pf_Int_Dec(va_list args)
 		while (exp > 0)
 		{
 			digit = num / exp;
-			_putchar(digit + '0');
+			_putchr(digit + '0');
 			num = num - (digit * exp);
 			exp = exp / 10;
 			i++;
 		}
 	}
-	_putchar(last + '0');
+	_putchr(last + '0');
 
 	return (i);
 }
