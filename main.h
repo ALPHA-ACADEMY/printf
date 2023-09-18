@@ -7,11 +7,17 @@
 #include <stdlib.h>
 #include <stdio.h>
 
+/**
+ * struct format - match the format specifiers.
+ * @id: char pointer pointed to --> d, i, s, o, x,...
+ * @f: pointer to function.
+*/
+
 typedef struct format
 {
 	char *id;
 	int (*f)();
-}format_specifiers;
+} format_specifiers;
 
 int _putchr(char c);
 int pf_String(va_list strings);
