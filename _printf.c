@@ -30,7 +30,7 @@ int _printf(const char * const format, ...)
 
 		for (j = 0; j < 5; j++)
 		{
-			if(m[j].id[0] == format[i] && m[j].id[1] == format[i + 1])
+			if (m[j].id[0] == format[i] && m[j].id[1] == format[i + 1])
 			{
 				len += m[j].f(args);
 				i += 2;

@@ -24,7 +24,7 @@ int pf_Int_Dec(va_list args)
 		_putchr('0');
 		i++;
 	}
-    	else
+	else
 	{
 		int exp = 1;
 		int temp = n;
@@ -33,7 +33,7 @@ int pf_Int_Dec(va_list args)
 		{
 			temp /= 10;
 			exp *= 10;
-        	}
+		}
 
 		while (exp > 1)
 		{
@@ -44,5 +44,5 @@ int pf_Int_Dec(va_list args)
 		}
 	}
 
-	return i;
+	return (i);
 }

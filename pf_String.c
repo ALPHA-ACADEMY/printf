@@ -1,7 +1,7 @@
 #include "main.h"
 
 /**
- * pf_string - print a string.
+ * pf_String - print a string.
  * @strings: argument passed by a function.
  * Return: the length of the string.
 */
@@ -17,6 +17,6 @@ int pf_String(va_list strings)
 	for (; s[l] != '\0'; l++)
 		_putchr(s[l]);
 
-	return l;
+	return (l);
 
 }
