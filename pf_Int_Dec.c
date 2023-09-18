@@ -9,7 +9,7 @@
 int pf_Int_Dec(va_list args)
 {
 	int n = va_arg(args, int);
-	int num = n;
+	int num;
 	int i = 0;
 	int digit;
 	int exp = 1;
@@ -20,6 +20,8 @@ int pf_Int_Dec(va_list args)
 		num = -num;
 		i++;
 	}
+
+	num = n;
 
 	while (num / 10 > 0)
 	{
