@@ -17,7 +17,7 @@ int pf_Int_Dec(va_list args)
 	if (n < 0)
 	{
 		_putchr('-');
-		num = -num;
+		n = -n;
 		i++;
 	}
 
