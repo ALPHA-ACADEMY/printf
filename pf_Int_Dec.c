@@ -12,6 +12,7 @@ int pf_Int_Dec(va_list args)
 	int num = n;
 	int i = 0;
 	int digit;
+	int exp = 1;
 
 	if (n < 0)
 	{
@@ -19,8 +20,6 @@ int pf_Int_Dec(va_list args)
 		num = -num;
 		i++;
 	}
-
-	int exp = 1;
 
 	while (num / 10 > 0)
 	{
