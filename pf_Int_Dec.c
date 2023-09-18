@@ -21,6 +21,7 @@ int pf_Int_Dec(va_list args)
 	}
 
 	int exp = 1;
+
 	while (num / 10 > 0)
 	{
 		exp *= 10;
@@ -36,7 +37,7 @@ int pf_Int_Dec(va_list args)
 		exp /= 10;
 		i++;
 	}
-	
+
 
 	return (i);
 }
