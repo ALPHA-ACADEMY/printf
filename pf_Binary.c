@@ -1,7 +1,7 @@
 #include "main.h"
 
 /**
- * printf_bin - prints a binary number.
+ * pf_Binary - prints a binary number.
  * @binary: arguments
  * Return: 1.
 */
