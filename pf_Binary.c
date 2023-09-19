@@ -8,23 +8,40 @@
 
 int pf_Binary(va_list binary)
 {
-	unsigned int n;
-	int binaryArr[32];
-	int i = 0, j;
+	unsigned int n = va_arg(binary, unsigned int);
+	int i, count = 0;
+	unsigned int tmp;
+	int *arr;
 
-	n = va_arg(binary, unsigned int);
-
-	while (n > 0)
+	if (n == 0)
 	{
-		binaryArr[i] = n % 2;
-		n /= 2;
-		i++;
+		_putchr('0');
+		return 1;
 	}
 
-	for (j = i - 1; j >= 0; j--)
+	tmp = n;
+
+	while (tmp != 0)
 	{
-		_putchr(binaryArr[j] + '0');
+		count++;
+		tmp >>= 1;
 	}
 
-	return (i);
+	arr = malloc(count * sizeof(int));
+	if (arr == NULL)
+		return 0;
+
+	tmp = n;
+
+	for (i = count - 1; i >= 0; i--)
+	{
+		arr[i] = tmp & 1;
+		tmp >>= 1;
+	}
+
+	for (i = 0; i < count; i++)
+		_putchr(arr[i] + '0');
+
+	free(arr);
+	return (count);
 }
